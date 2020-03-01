@@ -9,7 +9,7 @@ const errors = require('./errors');
 
 async function main() {
     const input = await Apify.getInput();
-    const { proxy, resultsType, resultsLimit = 200 } = input;
+    const { proxy, resultsType, resultsLimit = 50000000 } = input;
 
     const foundUrls = await searchUrls(input);
     const urls = [
